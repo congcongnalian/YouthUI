@@ -20,18 +20,18 @@ export const sidebar = {
         { text: 'Avatar 头像', link: '/components/avatar/' },
         { text: 'List 列表', link: '/components/list/' }
       ]
-    },
-    {
-      text: 'Navigation 导航组件',
-      items: []
-    },
-    {
-      text: 'Feedback 反馈组件',
-      items: []
-    },
-    {
-      text: 'Others 其他组件',
-      items: []
     }
+    // {
+    //   text: 'Navigation 导航组件',
+    //   items: []
+    // },
+    // {
+    //   text: 'Feedback 反馈组件',
+    //   items: []
+    // },
+    // {
+    //   text: 'Others 其他组件',
+    //   items: []
+    // }
   ]
 }

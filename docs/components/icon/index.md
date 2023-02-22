@@ -9,7 +9,7 @@
 
 ## 基础用法
 
-<!-- <preview path="./demo.vue" title="Icon" description="?"></preview> -->
+<preview path="./demo.vue" title="Icon" description="?"></preview>
 
 ## System
 
@@ -23,3 +23,4 @@
 :-: | :-: | :-: | :-: | :-: | :-:
 `type` | 图标的Symbol | string | - | - | 是
 `size` | 图标的大小 | number | - | `2` | 否
+`color` | 图标的颜色 | string | - | - | 否

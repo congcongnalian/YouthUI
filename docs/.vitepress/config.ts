@@ -8,12 +8,13 @@ import { nav } from './config/nav'
 import { sidebar } from './config/sidebar'
 
 export default defineConfig({
-  head: [['link', { rel: 'icon', href: '../assets/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: './favicon.ico' }]],
   title: 'YouthUI',
   lang: 'zh-CN',
   cleanUrls: true,
   // base: process.env.NODE_DEV === 'production' ? '/YouthUI/' : '/',
-  base: '/',
+  // base: '/',
+  base: '/YouthUI/',
   themeConfig: {
     sidebar,
     nav,

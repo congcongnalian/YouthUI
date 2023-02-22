@@ -7,9 +7,9 @@ titleTemplate: 一个Vue3组件库
 hero:
   name: YouthUI
   text: 一个Vue3组件库
-  tagline: 青训营-前端基础班作品
+  tagline: 青训营-前端基础班作品，仅供学习
   image: 
-    src: ./assets/YouthUI.png
+    src: ./YouthUI.png
     alt: YouthUI
   actions:
     - theme: brand
@@ -18,12 +18,12 @@ hero:
 
 features:
   - icon: ⚡️
-    title: Vite, The DX that can't be beat
-    details: Lorem ipsum...
-  - icon: 🖖
-    title: Power of Vue meets Markdown
-    details: Lorem ipsum...
-  - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
+    title: 快速
+    details: 使用Vite构建，打包和运行非常迅速
+  - icon: ✔
+    title: 安全易用
+    details: 使用Vue3+TS编写
+  - icon: ✨
+    title: 美观
+    details: 参考Element的UI设计风格和配色
 ---

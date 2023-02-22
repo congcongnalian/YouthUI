@@ -1,36 +1,43 @@
 <template>
   <div>
-    <!-- <svg class="icon" :style="finalStyle">
+    
+    <!-- <svg class="icon"  :style="finalStyle">
       <use :xlink:href="type"></use>
     </svg> -->
-    <i :class="iconClass"></i>
+
+    <span :class="finalClassName" :style="finalStyle"></span>
   </div>
 </template>
 
 <script lang="ts" setup>
-// import '../assets/iconfont.js'
-import { computed } from 'vue'
+import classnames from 'classnames';
+import {computed} from 'vue'
 interface Props {
   size?: number
   type: string
+  color:string
 }
 const props = withDefaults(defineProps<Props>(), {
-  size: 2,
+  size: 30,
+  color:'',
   type: ''
 })
 
-const iconClass = ['iconfont', `icon-${props.type}`]
 
-const finalStyle = computed(() => {
-  return `width:${props.size}em; height:${props.size}em;`
-})
+
+const finalClassName = classnames( 'iconfont','icon', {
+  [`${props.type}`]:props.type
+});
+const finalStyle = classnames(`font-size: ${props.size}px;`,{
+  [`color:${props.color}`]:props.color
+});
 </script>
 
 <style scoped lang="less">
-@import '../assets/demo.css';
+@import url(../assets/iconfont.css);
 .icon {
   vertical-align: -0.15em;
   overflow: hidden;
-  // fill: red;
+  fill: red;
 }
 </style>

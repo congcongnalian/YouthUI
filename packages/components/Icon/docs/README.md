@@ -27,3 +27,4 @@ import iconList from './iconList.vue'
 :-: | :-: | :-: | :-: | :-: | :-:
 `type` | 图标的Symbol | string | - | - | 是 
 `size` | 图标的大小 | number | - | `2` | 否
+`color` | 图标的颜色 | string | - | - | 否
