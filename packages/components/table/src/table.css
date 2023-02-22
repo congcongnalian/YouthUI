@@ -1,0 +1,100 @@
+/**
+ * @Author: Sam
+ * @Date: 2021-11-30 09:35:01
+ * @LastModifiedBy:   Sam
+ * @LastModifiedTime: 2021-11-30 09:35:01
+ */
+.table {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+  overflow-x: auto;
+}
+.table .table-inner {
+  font-feature-settings: "tnum";
+  position: relative;
+  clear: both;
+  transition: all 0.2s ease;
+}
+.table .table-inner .text-left {
+  text-align: left;
+}
+.table .table-inner .text-center {
+  text-align: center;
+}
+.table .table-inner .text-right {
+  text-align: right;
+}
+.table .table-inner .table-header,
+.table .table-inner .table-body {
+  width: 100%;
+  border: none;
+  border-spacing: 0;
+  table-layout: fixed;
+  transition: all 0.2s ease;
+}
+.table .table-inner .table-header .table-header-thead,
+.table .table-inner .table-body .table-header-thead {
+  display: table-header-group;
+  width: 100%;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.table .table-inner .table-header .table-header-thead tr,
+.table .table-inner .table-body .table-header-thead tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+.table .table-inner .table-header .table-header-thead tr th,
+.table .table-inner .table-body .table-header-thead tr th {
+  overflow-wrap: break-word;
+  display: table-cell;
+  padding: 12px 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.table .table-inner .table-header .table-header-thead tr th:first-child,
+.table .table-inner .table-body .table-header-thead tr th:first-child {
+  border-top-left-radius: 4px;
+}
+.table .table-inner .table-header .table-header-thead tr th:last-child,
+.table .table-inner .table-body .table-header-thead tr th:last-child {
+  border-top-right-radius: 4px;
+}
+.table .table-inner .table-header .table-body-tbody td,
+.table .table-inner .table-body .table-body-tbody td {
+  font-size: inherit;
+  font-weight: 400;
+  padding: 12px 10px;
+  word-break: break-all;
+}
+.table .table-inner .table-header .table-body-tbody .table-empty-tr,
+.table .table-inner .table-body .table-body-tbody .table-empty-tr {
+  text-align: center;
+}
+.table .table-inner .table-header {
+  height: 46px;
+  max-height: 46px;
+}
+.table-fixed-header .table-header {
+  z-index: 500;
+}
+.table-fixed-header .table-body {
+  z-index: 499;
+}
+.scrollbar {
+  width: 30px;
+  margin: 0 auto;
+}
+.table-body-area::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0px !important;
+}

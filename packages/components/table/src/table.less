@@ -1,0 +1,115 @@
+/**
+ * @Author: Sam
+ * @Date: 2021-11-30 09:35:01
+ * @LastModifiedBy:   Sam
+ * @LastModifiedTime: 2021-11-30 09:35:01
+ */
+
+.table {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+  overflow-x: auto;
+
+  .table-inner {
+    font-feature-settings: "tnum";
+    position: relative;
+    clear: both;
+    transition: all .2s ease;
+
+    .text-left {
+      text-align: left;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .text-right {
+      text-align: right;
+    }
+
+    .table-header,
+    .table-body {
+      width: 100%;
+      border: none;
+      border-spacing: 0;
+      table-layout: fixed;
+      transition: all .2s ease;
+
+      .table-header-thead {
+        display: table-header-group;
+        width: 100%;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        tr {
+          display: table-row;
+          vertical-align: inherit;
+          border-color: inherit;
+
+          th {
+            overflow-wrap: break-word;
+            display: table-cell;
+            padding: 12px 10px;
+            font-size: 14px;
+            font-weight: 500;
+
+            &:first-child {
+              border-top-left-radius: 4px;
+            }
+
+            &:last-child {
+              border-top-right-radius: 4px;
+            }
+          }
+        }
+      }
+
+      .table-body-tbody {
+        td {
+          font-size: inherit;
+          font-weight: 400;
+          padding: 12px 10px;
+          word-break: break-all;
+        }
+
+        .table-empty-tr {
+          text-align: center;
+        }
+      }
+    }
+
+    .table-header {
+      height: 46px;
+      max-height: 46px;
+    }
+  }
+  }
+  // 固定表头
+  .table-fixed-header {
+    .table-header {
+      z-index: 500;
+    }
+
+    .table-body {
+      z-index: 499;
+    }
+  }
+
+
+.scrollbar {
+  width: 30px;
+  margin: 0 auto;
+}
+
+.table-body-area::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0px !important;
+}
+
