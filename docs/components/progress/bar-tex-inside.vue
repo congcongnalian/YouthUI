@@ -1,0 +1,27 @@
+<template>
+  <div>
+    <y-progress
+      :barHeight="24"
+      :percentage="70"
+      :text-inside="true"
+    ></y-progress>
+    <y-progress
+      :barHeight="24"
+      :percentage="100"
+      :text-inside="true"
+      status="success"
+    ></y-progress>
+    <y-progress
+      :barHeight="24"
+      :percentage="60"
+      :text-inside="true"
+      status="warning"
+    ></y-progress>
+    <y-progress
+      :barHeight="24"
+      :percentage="40"
+      :text-inside="true"
+      status="danger"
+    ></y-progress>
+  </div>
+</template>

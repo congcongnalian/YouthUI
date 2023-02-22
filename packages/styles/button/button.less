@@ -1,0 +1,57 @@
+// @import "@/styles/theme/theme.less";
+
+.y-button {
+  box-sizing: content-box;
+  display: inline-flex;
+  text-align: center;
+  cursor: pointer;
+  // color
+  --y-hover-bg-color: #fff;
+  --y-button-bg-color: #fff;
+  --y-button-text-color: var(--y-color-primary-text);
+  color: var(--y-button-text-color);
+  background-color: var(--y-button-bg-color);
+  // font
+  font-size: var(--y-font-size);
+  font-weight: 500;
+  // size
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-border-radius-base);
+
+  line-height: 1;
+  height: 14px;
+  padding: 8px 16px;
+  transition: all 0.3s;
+  // 相邻button间隔
+  + .y-button {
+    margin-left: 12px;
+  }
+
+  &:hover {
+    background-color: var(--y-button-hover-bg-color);
+  }
+
+  &.round {
+    border-radius: var(--y-border-radius-round);
+  }
+
+  &.circle {
+    border-radius: var(--y-border-radius-circle);
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    // background-color: #a8abb2;
+    &:hover {
+      background-image: none;
+    }
+  }
+}
+
+.y-button--large {
+  padding: 12px 20px;
+}
+
+.y-button--small {
+  padding: 4px 12px;
+}

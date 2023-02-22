@@ -1,0 +1,32 @@
+.y-date-table {
+  width: 100%;
+  .y-table-item {
+    --y-table-text-color: #bdc0c5;
+    --y-table__item-size: 24px;
+
+    border: none;
+    cursor: pointer;
+    color: var(--y-table-text-color);
+    &:hover {
+      .y-table-item__text {
+        color: var(--y-color-primary);
+      }
+    }
+    .y-table-item__text {
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      width: var(--y-table__item-size);
+      height: var(--y-table__item-size);
+      &.active {
+        background-color: var(--y-color-primary);
+        color: #fff;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.current-month {
+  color: var(--y-color-primary-text);
+}
