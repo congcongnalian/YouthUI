@@ -10,7 +10,7 @@
       type="file"
       name="file"
       style="display: none"
-      @change="handleFile "
+      @change="handleFile"
       :disabled="disabled"
     />
   </div>
@@ -25,7 +25,13 @@
       <span class="filename">
         {{ file.name }}
       </span>
-      <button class="delete-icon" @click="removeFile(file.uid)" style="margin-left: 10px;">Del</button>
+      <button
+        class="delete-icon"
+        @click="removeFile(file.uid)"
+        style="margin-left: 10px"
+      >
+        Del
+      </button>
     </li>
   </ul>
 </template>
@@ -52,14 +58,14 @@ interface Props {
   headers?: obj
   name?: string
   data?: obj
-  disabled?: boolean,
-  list?:boolean
+  disabled?: boolean
+  list?: boolean
 }
 const props = withDefaults(defineProps<Props>(), {
   actions: '',
   name: 'file',
   disabled: false,
-  list:false
+  list: false
 })
 
 // input实例对象
@@ -96,7 +102,6 @@ const handleFileChange = (e: Event) => {
     const formData = new FormData()
     formData.append(props.name, uploadedFile)
     fileStatus.value = 'loading' // 上传之前将状态设置为loading
-    console.log('fromData-->', formData.get(props.name))
     axios
       .post(props.actions, formData.get('file'), {
         headers: props.headers,
@@ -128,7 +133,7 @@ const handleFilesListChange = (e: Event) => {
       status: 'loading',
       raw: uploadedFile
     })
-    if (isUploading.value )  fileStatus.value = 'loading'
+    if (isUploading.value) fileStatus.value = 'loading'
     filesList.value.push(fileObj)
 
     axios
@@ -145,11 +150,11 @@ const handleFilesListChange = (e: Event) => {
       .then((resp) => {
         console.log('resp', resp)
         fileObj.status = 'success'
-        if(lastFileData.value) fileStatus.value ='success'
+        if (lastFileData.value) fileStatus.value = 'success'
       })
       .catch((error) => {
         fileObj.status = 'error'
-         fileStatus.value = 'error'
+        fileStatus.value = 'error'
       })
       .finally(() => {
         // 一张图片重复上传时无法继续上传bug
@@ -160,8 +165,8 @@ const handleFilesListChange = (e: Event) => {
   }
 }
 // 通过list判断调用哪个函数
-const handleFile=(e:Event)=>{
-  props.list? handleFilesListChange(e): handleFileChange(e)
+const handleFile = (e: Event) => {
+  props.list ? handleFilesListChange(e) : handleFileChange(e)
 }
 const removeFile = (uid: string) => {
   filesList.value = filesList.value.filter((file) => file.uid !== uid)

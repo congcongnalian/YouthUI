@@ -9,11 +9,11 @@ import { FooPlugin } from './components/Foo'
 import { ProgressPlugin } from './components/Progress'
 import { AvatarPlugin } from './components/Avatar'
 import { DatePickerPlugin } from './components/DatePicker'
-// import { ContainerPlugin } from './components/Container'
+import { ContainerPlugin } from './components/Container'
 import { LayoutPlugin } from './components/Layout'
-// import { ListPlugin } from './components/List'
-// import { SwitchPlugin } from './components/Switch'
-// import { IconPlugin } from './components/Icon'
+import { ListPlugin } from './components/List'
+import { SwitchPlugin } from './components/Switch'
+import { IconPlugin } from './components/Icon'
 // import { UploadPlugin } from './components/Upload'
 
 const YouthUIPlugin: Plugin = {
@@ -23,11 +23,11 @@ const YouthUIPlugin: Plugin = {
     ProgressPlugin.install?.(app)
     AvatarPlugin.install?.(app)
     DatePickerPlugin.install?.(app)
-    // ContainerPlugin.install?.(app)
+    ContainerPlugin.install?.(app)
     LayoutPlugin.install?.(app)
-    // ListPlugin.install?.(app)
-    // SwitchPlugin.install?.(app)
-    // IconPlugin.install?.(app)
+    ListPlugin.install?.(app)
+    SwitchPlugin.install?.(app)
+    IconPlugin.install?.(app)
     // UploadPlugin.install?.(app)
   }
 }
@@ -39,9 +39,9 @@ export * from './components/Foo'
 export * from './components/Progress'
 export * from './components/Avatar'
 export * from './components/DatePicker'
-// export * from './components/Container'
+export * from './components/Container'
 export * from './components/Layout'
-// export * from './components/List'
-// export * from './components/Switch'
-// export * from './components/Icon'
+export * from './components/List'
+export * from './components/Switch'
+export * from './components/Icon'
 // export * from './components/Upload'
