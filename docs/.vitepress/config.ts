@@ -12,8 +12,8 @@ export default defineConfig({
   title: 'YouthUI',
   lang: 'zh-CN',
   cleanUrls: true,
-  // base: process.env.NODE_DEV === 'production' ? '/YouthUI/' : '/',
-  base: '/docs/',
+  base: process.env.NODE_DEV === 'production' ? '/YouthUI/' : '/',
+  // base: '/docs/',
   themeConfig: {
     sidebar,
     nav,
